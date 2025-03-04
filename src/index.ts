@@ -10,7 +10,24 @@ const lessons: Lesson[] = [
     title: 'Wprowadzenie do RxJS',
     description: 'Podstawy Observable i pierwsza subskrypcja'
   },
+  {
+    id: '2',
+    title: 'Observable',
+    description: 'Poszerzenie wiedzy o Observable'
+  },
 ];
+
+export const LOG_LEVEL_ERROR = 'ERROR';
+export const LOG_LEVEL_DEBUG = 'DEBUG';
+
+export type LogLevel = typeof LOG_LEVEL_ERROR | typeof LOG_LEVEL_DEBUG;
+
+export const logMessage = (message: string, level: LogLevel = LOG_LEVEL_DEBUG) => {
+  console.log(message, `[${level}]`)
+  const debugWindow = document.getElementById('debugWindow');
+  if (!debugWindow) return;
+  debugWindow.append(`[${level}] ${message} \n\r`)
+}
 
 function createLessonsList() {
   const lessonsListElement = document.getElementById('lessonsList');
