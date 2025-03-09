@@ -25,6 +25,11 @@ const lessons: Lesson[] = [
     title: 'Type of Observable',
     description: 'Typy obiektu Observable'
   },
+  {
+    id: '5',
+    title: 'Creation Functions',
+    description: 'Tworzenie observable za pomocą RxJS'
+  },
 ];
 
 export const LOG_LEVEL_ERROR = 'ERROR';
@@ -37,6 +42,12 @@ export const logMessage = (message: string, level: LogLevel = LOG_LEVEL_DEBUG) =
   const debugWindow = document.getElementById('debugWindow');
   if (!debugWindow) return;
   debugWindow.append(`[${level}] ${message} \n\r`)
+}
+
+export const clearMessages = () => {
+  const debugWindow = document.getElementById('debugWindow');
+  if (!debugWindow) return;
+  debugWindow.textContent = '';
 }
 
 function createLessonsList() {
