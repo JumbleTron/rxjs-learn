@@ -15,6 +15,11 @@ const lessons: Lesson[] = [
     title: 'Observable',
     description: 'Poszerzenie wiedzy o Observable'
   },
+  {
+    id: '3',
+    title: 'Subscription',
+    description: 'Podstawy Subscription'
+  },
 ];
 
 export const LOG_LEVEL_ERROR = 'ERROR';
