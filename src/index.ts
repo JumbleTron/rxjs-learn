@@ -30,12 +30,18 @@ const lessons: Lesson[] = [
     title: 'Creation Functions',
     description: 'Tworzenie observable za pomocą RxJS'
   },
+  {
+    id: '6',
+    title: 'Pipeable operators',
+    description: 'Tworzenie podstawowych funckji przekształącajacych obiekty Observable'
+  },
 ];
 
 export const LOG_LEVEL_ERROR = 'ERROR';
 export const LOG_LEVEL_DEBUG = 'DEBUG';
+export const LOG_LEVEL_SPY = 'SPY';
 
-export type LogLevel = typeof LOG_LEVEL_ERROR | typeof LOG_LEVEL_DEBUG;
+export type LogLevel = typeof LOG_LEVEL_ERROR | typeof LOG_LEVEL_DEBUG | typeof LOG_LEVEL_SPY;
 
 export const logMessage = (message: string, level: LogLevel = LOG_LEVEL_DEBUG) => {
   console.log(message, `[${level}]`)
@@ -67,5 +73,7 @@ function createLessonsList() {
     lessonsListElement.appendChild(lessonElement);
   });
 }
+
+export const randomNumber = (min = 1000, max = 5000) => Math.floor(Math.random() * (max - min + 1) + min)
 
 document.addEventListener('DOMContentLoaded', createLessonsList); 
