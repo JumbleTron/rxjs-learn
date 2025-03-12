@@ -40,6 +40,11 @@ const lessons: Lesson[] = [
     title: 'Flatting operators',
     description: 'Tworzenie podstawowych funckji łączących obiekty Observable'
   },
+  {
+    id: '8',
+    title: 'Subject',
+    description: 'Podstawy publikacji do wielu odbiorców'
+  },
 ];
 
 export const LOG_LEVEL_ERROR = 'ERROR';
