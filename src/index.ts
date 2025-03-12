@@ -35,6 +35,11 @@ const lessons: Lesson[] = [
     title: 'Pipeable operators',
     description: 'Tworzenie podstawowych funckji przekształącajacych obiekty Observable'
   },
+  {
+    id: '7',
+    title: 'Flatting operators',
+    description: 'Tworzenie podstawowych funckji łączących obiekty Observable'
+  },
 ];
 
 export const LOG_LEVEL_ERROR = 'ERROR';
