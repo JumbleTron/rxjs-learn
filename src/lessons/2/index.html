@@ -2,12 +2,29 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
-    <title>RxJS Lekcja 2</title>
+    <title>RxJS - Zarządzanie subskrypcjami w RxJS</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
 </head>
 <body>
 <div class="container mt-3">
-    <h1>RxJS Lekcja 2</h1>
+    <div class="alert alert-info">
+        <h4>Zarządzanie subskrypcjami w RxJS</h4>
+        <p>W tej lekcji poznajemy:</p>
+        <ul>
+            <li>Tworzenie własnych Observable z użyciem konstruktora</li>
+            <li>Zarządzanie czasem życia subskrypcji</li>
+            <li>Metoda <code>unsubscribe()</code> i jej znaczenie</li>
+            <li>Wielokrotne subskrypcje do tego samego Observable</li>
+            <li>Wykonywanie Observable dla każdego nowego subskrybenta</li>
+        </ul>
+        <p>Przykłady zawierają:</p>
+        <ul>
+            <li>Observable emitujący dane w określonych odstępach czasu</li>
+            <li>Dwie różne subskrypcje uruchamiane w różnych momentach</li>
+            <li>Ręczne anulowanie subskrypcji po określonym czasie</li>
+            <li>Demonstrację, że każda subskrypcja tworzy nową instancję Observable</li>
+        </ul>
+    </div>
     <pre id="debugWindow"></pre>
     <a href="/index.html"><- Powrót</a>
 </div>

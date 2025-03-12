@@ -2,13 +2,52 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
-    <title>RxJS Lekcja 6</title>
+    <title>RxJS - Operatory transformacji i filtrowania w RxJS</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
 </head>
 <body>
 <div class="container mt-3">
-    <h1>RxJS Lekcja 6</h1>
-    <input type="text" id="debounceInput" placeholder="Demonstrate Debounce in RxJS" />
+    <div class="alert alert-info">
+        <h4>Operatory transformacji i filtrowania w RxJS</h4>
+        <p>W tej lekcji poznajemy:</p>
+        <ul>
+            <li>Operatory transformacji strumieni:
+                <ul>
+                    <li><code>map()</code> - przekształcanie wartości</li>
+                    <li><code>filter()</code> - filtrowanie wartości</li>
+                    <li><code>tap()</code> - podgląd wartości bez ich modyfikacji</li>
+                    <li><code>debounceTime()</code> - kontrola częstotliwości emisji</li>
+                </ul>
+            </li>
+            <li>Obsługę błędów:
+                <ul>
+                    <li><code>catchError()</code> - obsługa i transformacja błędów</li>
+                    <li><code>EMPTY</code> - zakończenie strumienia bez emisji</li>
+                </ul>
+            </li>
+            <li>Integrację z API zewnętrznym:
+                <ul>
+                    <li>Użycie <code>ajax</code> do pobierania danych</li>
+                    <li>Transformacja odpowiedzi API</li>
+                </ul>
+            </li>
+        </ul>
+        <p>Przykłady zawierają:</p>
+        <ul>
+            <li>Symulację kanału wiadomości z filtrowaniem kategorii</li>
+            <li>Pobieranie losowych imion z API</li>
+            <li>Transformację i filtrowanie liczb</li>
+            <li>Kontrolę wprowadzania tekstu z debounce</li>
+            <li>Obsługę błędów z wartościami fallback</li>
+        </ul>
+        <p class="mt-2">Interaktywna demonstracja:</p>
+        <ul>
+            <li>Pole tekstowe z debounce - pokazuje kontrolę częstotliwości emisji</li>
+            <li>Konsola - demonstracja różnych operatorów i ich efektów</li>
+            <li>Przykład integracji z zewnętrznym API</li>
+        </ul>
+    </div>
+    <input type="text" id="debounceInput" class="form-control" placeholder="Demonstrate Debounce in RxJS" />
     <button type="button" class="btn btn-secondary" id="clear">Clear logs</button>
     <pre id="debugWindow" class="mt-2"></pre>
     <a href="/index.html"><- Powrót</a>

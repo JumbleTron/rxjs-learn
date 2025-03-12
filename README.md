@@ -11,16 +11,34 @@ Repozytorium zawiera materiały do kursu RxJS z TypeScript. Każda lekcja znajdu
 │   └── index.ts
 ├── lessons/
 │   ├── 1/
-│   │   ├── index.html
-│   │   └── index.ts
+│   │   ├── index.html    # Zawiera opis lekcji i przykłady
+│   │   └── index.ts      # Implementacja przykładów
 │   └── 2/
-│       ├── index.html
-│       └── index.ts
+│       ├── index.html    # Zawiera opis lekcji i przykłady
+│       └── index.ts      # Implementacja przykładów
 ├── package.json
 ├── tsconfig.json
 └── webpack.config.js
 ```
 
+## Zawartość lekcji
+
+Każda lekcja zawiera:
+- Szczegółowy opis tematu w pliku `index.html`
+- Listę omawianych koncepcji
+- Praktyczne przykłady z kodem
+- Interaktywne demonstracje
+- Implementację przykładów w pliku `index.ts`
+
+Lekcje obejmują:
+1. Podstawy Observable i Subskrypcji
+2. Zarządzanie subskrypcjami
+3. Cykl życia Observable
+4. Zimne i gorące Observable
+5. Metody tworzenia Observable i operatory łączące
+6. Operatory transformacji i filtrowania
+7. Operatory wyższego rzędu (Higher Order Mapping)
+8. Subjects i BehaviorSubjects
 
 ## Wymagania
 

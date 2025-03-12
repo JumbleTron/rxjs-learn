@@ -2,12 +2,34 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
-    <title>RxJS Lekcja 4</title>
+    <title>RxJS - Zimne i Gorące Observable</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
 </head>
 <body>
 <div class="container mt-3">
-    <h1>RxJS Lekcja 4</h1>
+    <div class="alert alert-info">
+        <h4>Zimne i Gorące Observable</h4>
+        <p>W tej lekcji poznajemy:</p>
+        <ul>
+            <li>Różnice między zimnymi (cold) a gorącymi (hot) Observable</li>
+            <li>Interakcję z elementami DOM przy użyciu RxJS</li>
+            <li>Zarządzanie wieloma subskrypcjami</li>
+            <li>Obsługę zdarzeń użytkownika (kliknięcia)</li>
+        </ul>
+        <p>Przykłady zawierają:</p>
+        <ul>
+            <li><strong>Cold Observable:</strong> Licznik z osobnym stanem dla każdej subskrypcji</li>
+            <li><strong>Hot Observable:</strong> Współdzielone zdarzenia kliknięć między subskrybentami</li>
+            <li>Dynamiczne rozpoczynanie i zatrzymywanie subskrypcji</li>
+            <li>Prawidłowe zarządzanie pamięcią poprzez czyszczenie subskrypcji</li>
+        </ul>
+        <p class="mt-2">Interaktywna demonstracja:</p>
+        <ul>
+            <li>Przycisk "Hello!" - demonstruje hot Observable (współdzielone zdarzenia)</li>
+            <li>Przyciski "Start cold" - uruchamiają niezależne liczniki (cold Observable)</li>
+            <li>Przyciski "Stop cold" - zatrzymują odpowiednie liczniki</li>
+        </ul>
+    </div>
     <button type="button" class="btn btn-primary" id="hello">Hello!</button>
     <div class="btn-group" role="group" aria-label="Start cold">
         <button type="button" class="btn btn-success" id="start1">Start cold 1</button>

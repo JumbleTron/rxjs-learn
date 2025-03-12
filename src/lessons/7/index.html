@@ -2,17 +2,60 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
-    <title>RxJS Lekcja 7</title>
+    <title>RxJS - Operatory wyższego rzędu (Higher Order Mapping)</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
 </head>
 <body>
 <div class="container mt-3">
-    <h1>RxJS Lekcja 7</h1>
-    <button type="button" class="btn btn-secondary" id="clear">Clear logs</button>
-    <input type="text" id="fetchInput" placeholder="Enter a URL" />
-    <button type="button" class="btn btn-primary" id="fetch">Fetch</button>
-    <button type="button" class="btn btn-success" id="startSwitchMap">Start switchMap</button>
-    <button type="button" class="btn btn-warning" id="startMergeMap">Start mergeMap</button>
+    <div class="alert alert-info">
+        <h4>Temat lekcji: Operatory wyższego rzędu (Higher Order Mapping)</h4>
+        <p>W tej lekcji poznajemy zaawansowane operatory do zarządzania zagnieżdżonymi strumieniami:</p>
+        <ul>
+            <li><code>concatMap()</code>:
+                <ul>
+                    <li>Sekwencyjne przetwarzanie strumieni</li>
+                    <li>Czeka na zakończenie poprzedniej operacji</li>
+                    <li>Idealny dla zachowania kolejności operacji</li>
+                </ul>
+            </li>
+            <li><code>switchMap()</code>:
+                <ul>
+                    <li>Anuluje poprzednią operację gdy pojawi się nowa</li>
+                    <li>Przydatny dla operacji, które mogą być zastąpione</li>
+                    <li>Zapobiega równoległemu wykonywaniu operacji</li>
+                </ul>
+            </li>
+            <li><code>mergeMap()</code>:
+                <ul>
+                    <li>Równoległe przetwarzanie strumieni</li>
+                    <li>Nie anuluje poprzednich operacji</li>
+                    <li>Uwaga na potencjalne wycieki pamięci</li>
+                </ul>
+            </li>
+        </ul>
+        <p>Przykłady zawierają:</p>
+        <ul>
+            <li>Pobieranie danych z API z użyciem <code>concatMap</code></li>
+            <li>Interwały czasowe z <code>switchMap</code> - anulowanie poprzednich operacji</li>
+            <li>Równoległe interwały z <code>mergeMap</code> - demonstracja nakładania się operacji</li>
+            <li>Obsługę błędów w zagnieżdżonych strumieniach</li>
+        </ul>
+        <p class="mt-2">Interaktywna demonstracja:</p>
+        <ul>
+            <li>Przycisk "Fetch" - sekwencyjne pobieranie danych z API</li>
+            <li>Przycisk "Start switchMap" - demonstracja anulowania poprzednich operacji</li>
+            <li>Przycisk "Start mergeMap" - pokazuje równoległe wykonywanie operacji</li>
+        </ul>
+    </div>
+    <div class="form-group mt-3">
+        <input type="text" id="fetchInput" class="form-control" placeholder="Enter a URL" />
+    </div>
+    <div class="btn-group mt-2">
+        <button type="button" class="btn btn-primary" id="fetch">Fetch</button>
+        <button type="button" class="btn btn-success" id="startSwitchMap">Start switchMap</button>
+        <button type="button" class="btn btn-warning" id="startMergeMap">Start mergeMap</button>
+        <button type="button" class="btn btn-secondary" id="clear">Clear logs</button>
+    </div>
     <pre id="debugWindow" class="mt-2"></pre>
     <a href="/index.html"><- Powrót</a>
 </div>

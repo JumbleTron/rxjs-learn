@@ -2,17 +2,55 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
-    <title>RxJS Lekcja 8</title>
+    <title>RxJS - Subjects w RxJS</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
 </head>
 <body>
 <div class="container mt-3">
-    <h1>RxJS Lekcja 8</h1>
-    <button type="button" class="btn btn-secondary" id="clear">Clear logs</button>
-    <input type="text" id="emitInput" placeholder="Enter a value" />
-    <button type="button" class="btn btn-primary" id="emit">Emit</button>
-    <button type="button" class="btn btn-success" id="subscribe">Subscribe</button>
-    <button type="button" class="btn btn-warning" id="subscribeB">Subscribe with state</button>
+    <div class="alert alert-info">
+        <h4>Temat lekcji: Subjects w RxJS</h4>
+        <p>W tej lekcji poznajemy Subjects - specjalne typy Observable, które mogą zarówno emitować wartości, jak i nasłuchiwać na nie:</p>
+        <ul>
+            <li><code>Subject</code>:
+                <ul>
+                    <li>Podstawowy typ Subject</li>
+                    <li>Działa jak Observable i Observer jednocześnie</li>
+                    <li>Nowi subskrybenci otrzymują tylko przyszłe wartości</li>
+                </ul>
+            </li>
+            <li><code>BehaviorSubject</code>:
+                <ul>
+                    <li>Rozszerzenie zwykłego Subject</li>
+                    <li>Wymaga wartości początkowej</li>
+                    <li>Przechowuje ostatnią wartość</li>
+                    <li>Nowi subskrybenci otrzymują ostatnią wartość od razu po subskrypcji</li>
+                </ul>
+            </li>
+        </ul>
+        <p>Przykłady zawierają:</p>
+        <ul>
+            <li>Emisję wartości do wielu subskrybentów</li>
+            <li>Dynamiczne dodawanie nowych subskrybentów</li>
+            <li>Porównanie zachowania Subject i BehaviorSubject</li>
+            <li>Zarządzanie stanem aplikacji</li>
+        </ul>
+        <p class="mt-2">Interaktywna demonstracja:</p>
+        <ul>
+            <li>Pole wprowadzania wartości do emisji</li>
+            <li>Przycisk "Emit" - emituje wartość do wszystkich subskrybentów</li>
+            <li>Przycisk "Subscribe" - dodaje nowego subskrybenta do zwykłego Subject</li>
+            <li>Przycisk "Subscribe with state" - dodaje subskrybenta do BehaviorSubject</li>
+        </ul>
+    </div>
+    <div class="form-group mt-3">
+        <input type="text" id="emitInput" class="form-control" placeholder="Enter a value" />
+    </div>
+    <div class="btn-group mt-2">
+        <button type="button" class="btn btn-primary" id="emit">Emit</button>
+        <button type="button" class="btn btn-success" id="subscribe">Subscribe</button>
+        <button type="button" class="btn btn-warning" id="subscribeB">Subscribe with state</button>
+        <button type="button" class="btn btn-secondary" id="clear">Clear logs</button>
+    </div>
     <pre id="debugWindow" class="mt-2"></pre>
     <a href="/index.html"><- Powrót</a>
 </div>

@@ -2,12 +2,48 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
-    <title>RxJS Lekcja 5</title>
+    <title>RxJS - Metody tworzenia Observable i operatory łączące</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
 </head>
 <body>
 <div class="container mt-3">
-    <h1>RxJS Lekcja 5</h1>
+    <div class="alert alert-info">
+        <h4>Metody tworzenia Observable i operatory łączące</h4>
+        <p>W tej lekcji poznajemy:</p>
+        <ul>
+            <li>Różne metody tworzenia Observable:
+                <ul>
+                    <li><code>of()</code> - dla prostych wartości</li>
+                    <li><code>from()</code> - dla tablic i Promise</li>
+                    <li><code>fromEvent()</code> - dla zdarzeń DOM</li>
+                    <li><code>interval()</code> - dla cyklicznych emisji</li>
+                    <li><code>timer()</code> - dla opóźnionych emisji</li>
+                </ul>
+            </li>
+            <li>Operatory łączące strumienie:
+                <ul>
+                    <li><code>forkJoin()</code> - łączenie wielu zakończonych Observable</li>
+                    <li><code>combineLatest()</code> - łączenie ostatnich wartości z wielu strumieni</li>
+                </ul>
+            </li>
+            <li>Obsługę błędów i zakończenia strumieni</li>
+            <li>Praktyczne zastosowanie w formularzu konwersji temperatur</li>
+        </ul>
+        <p>Przykłady zawierają:</p>
+        <ul>
+            <li>Konwersję różnych typów danych na Observable</li>
+            <li>Obsługę zdarzeń użytkownika (kliknięcia, input)</li>
+            <li>Synchronizację wielu strumieni danych</li>
+            <li>Praktyczny przykład formularza z reaktywną walidacją</li>
+            <li>Zarządzanie czasem życia subskrypcji</li>
+        </ul>
+        <p class="mt-2">Interaktywna demonstracja:</p>
+        <ul>
+            <li>Przycisk "Click me!" - demonstracja <code>fromEvent</code></li>
+            <li>Formularz konwersji temperatur - przykład użycia <code>combineLatest</code></li>
+            <li>Różne przykłady tworzenia i łączenia strumieni w konsoli</li>
+        </ul>
+    </div>
     <button type="button" class="btn btn-primary" id="clickMe">Click me!</button>
     <button type="button" class="btn btn-secondary" id="clear">Clear logs</button>
     <form class="mt-4 form-inline">

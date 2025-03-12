@@ -2,12 +2,35 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
-    <title>RxJS Lekcja 3</title>
+    <title>RxJS - Cykl życia Observable i zarządzanie zasobam</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
 </head>
 <body>
 <div class="container mt-3">
-    <h1>RxJS Lekcja 3</h1>
+    <div class="alert alert-info">
+        <h4>Temat lekcji: Cykl życia Observable i zarządzanie zasobami</h4>
+        <p>W tej lekcji poznajemy:</p>
+        <ul>
+            <li>Pełny cykl życia Observable (wykonanie, emisja, zakończenie, błędy)</li>
+            <li>Funkcję czyszczącą (teardown) i jej znaczenie</li>
+            <li>Obsługę wszystkich typów zdarzeń w subskrypcji (<code>next</code>, <code>error</code>, <code>complete</code>)</li>
+            <li>Implementację interwałów czasowych w Observable</li>
+            <li>Prawidłowe zwalnianie zasobów</li>
+        </ul>
+        <p>Przykłady zawierają:</p>
+        <ul>
+            <li>Observable z sekwencyjną emisją wartości</li>
+            <li>Obsługę błędów i zakończenia strumienia</li>
+            <li>Implementację licznika z interwałem czasowym</li>
+            <li>Demonstrację niezależnych subskrypcji z własnym stanem</li>
+            <li>Prawidłowe czyszczenie interwałów czasowych</li>
+        </ul>
+        <p class="mt-2">Lekcja zawiera dwa przykłady:</p>
+        <ul>
+            <li><strong>Example:</strong> Podstawowy przykład z obsługą błędów i zakończenia</li>
+            <li><strong>Exercise:</strong> Zaawansowany przykład z interwałami czasowymi i wieloma subskrypcjami</li>
+        </ul>
+    </div>
     <pre id="debugWindow"></pre>
     <a href="/index.html"><- Powrót</a>
 </div>
